@@ -14,7 +14,7 @@ It is designed to show the code of personal work included in the portfolio.<br><
 It is prohibited for individuals or organizations to take and use the code.<br>
 Please use it only for viewing your portfolio.<br><br>
 
-Thank you.👋👋👋
+Thank you.👋👋👋<br>
 
 
 
