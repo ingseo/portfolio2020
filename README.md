@@ -8,7 +8,7 @@
 
 -<br><br>
 
-This is the code repository for Inseo Lee, a "currently on-going" web publisher.😄<br>
+This is the code repository for Inseo Lee, a "Present Continuous" web publisher.😄<br>
 It is designed to show the code of personal work included in the portfolio.<br><br>
 
 It is prohibited for individuals or organizations to take and use the code.<br>
