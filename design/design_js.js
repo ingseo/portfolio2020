@@ -178,7 +178,7 @@ $('.section4 .container2 .box3').click(function(){
 })   
 
 
-//section5 동영상 //자막때문에 아래를 기준으로 맞춰두었는데, 어떻게하는게 좋을까...
+//section5 동영상 //자막때문에 아래를 기준으로 맞춰두었는데, 어떻게하는게 좋을까요?
 function video(){
     f_w = $('.frame').width();
     f_h = $('.frame').height();
@@ -197,5 +197,5 @@ $(window).resize(function(){
 })
 
 
-//모든 버튼이 팝업으로라도 활성화되는게 좋을까??
+//모든 버튼이 팝업으로라도 활성화되는게 좋을까요? 확인 후 수정!
 //section4 모바일화면 버튼, section6 관람요금 관련 버튼, section7 참가신청-가이드 버튼
