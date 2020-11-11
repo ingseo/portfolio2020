@@ -1,0 +1,261 @@
+@charset"utf-8";
+
+/*전체*/
+*{padding: 0; margin: 0; position: relative; list-style: none;}
+html, body{width: 100%; height: 100%;}
+img{display: block; width: 100%}
+@font-face {font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal; }
+::selection{background: #000aba; color: white;}
+
+body a{text-decoration: none; color: inherit;}
+body a:hover{text-decoration: none; color: inherit;}
+body a:visited{text-decoration: none; color: inherit;}
+body a:link{text-decoration: none;}
+
+.section{background: #e2e2e2;}
+.section1, footer{padding : 70px 0;}
+.plus{color: #464646; font-weight: bold; transition: 0.3s; font-family: 'HSBombaram';font-size: 15px; cursor: pointer;}
+.plus:hover{color: #000aba;}
+.plus:nth-of-type(1){width: 95px !important;}
+.plus span{display: block; background-color: #000aba; width: 0; height: 3px; transition: 0.3s}
+.plus:hover span{width: 100%;}
+
+
+/*타이틀 전체*/
+.section>.title{z-index: 10; position: absolute; font-family: 'HSBombaram'; color: #000aba; transform: translate(150px, 60px) rotate(90deg); transform-origin: top left; top: 0; left: 0; font-size: 72px; pointer-events: none;}
+.section>.title span{display: block; background: #000aba; height: 1px; width: 55px; position: absolute; left:-60px; top: 45px}
+@media(max-width: 1500px){
+    .section>.title{font-size: 60px;}
+    .section>.title span{top: 40px;}
+}
+@media(max-width: 768px){
+    .section>.title{font-size: 20px; transform : translate(40px, 40px) rotate(0deg)}
+    .section>.title span{top: 12px;}
+}
+
+/*상단 header*/
+.header{z-index: 1000;}
+.header .menu{display: flex; flex-direction: column; align-items: flex-end; position: absolute; position: fixed; right: 0; top: 0; padding: 10px; margin: 30px; cursor: pointer;}
+.header span{display: inline-block; width:15px; height: 2px; background-color: white; margin: 3px; transition: 0.3s;}
+.header span:nth-of-type(2){width: 30px;}
+
+@keyframes arrow{
+    0%{transform: translateY(0) rotate(270deg)}
+    50%{transform: translateY(5px) rotate(270deg)}
+    100%{transform: translateY(0) rotate(270deg)}
+}
+
+.active .menu{transform: rotate(-90deg) !important}
+.active span:nth-of-type(1){transform: rotate(45deg); top: 2px; left: 1px}
+.active span:nth-of-type(2){}
+.active span:nth-of-type(3){transform: rotate(-45deg);top: -2px; left: 1px}
+.active .menu:hover{animation: arrow 1s infinite !important;}
+
+
+/*메뉴*/
+.m-menu{z-index: 500; position: fixed; width: 100%; height: 60vh; font-family: 'HSBombaram'; display: none;}
+.black-bg{position: fixed; width: 100%; height: 100vh; background: black; opacity: 0; z-index: -100; transition: 0.5s;}
+.m-menu .mask{width: 100%; height: 100%; clip-path:polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 60%); background: #000aba; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.m-menu .mask .logo{width: 200px; top: -20px;}
+.m-menu .mask .menu-list{color: white; text-align: center; font-size: 30px; margin-bottom: 0; margin: 20px 0;}
+.m-menu .mask .menu-list li{margin-bottom: 10px;}
+.m-menu .mask .sns{display: flex; font-size: 30px; margin-bottom: 20px;}
+.m-menu .mask .sns li{margin: 10px; color: white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer;}
+
+@media(max-width:1300px){
+    .m-menu{height: 100vh;}
+    .m-menu .mask{clip-path:polygon(0 0, 100% 0, 100% 100%, 0 80%);}
+}
+
+.view{opacity: 0.7 !important; z-index: 400 !important;}
+.hiddenscroll{overflow: hidden;}
+
+/*메인*/
+.main{width: 100%;height: 100vh; color: white; overflow: hidden;
+        background-color: #000aba;
+        background-repeat:no-repeat;
+        background-size: cover;}
+.main .container{width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.main .logo{z-index: 10;}
+.main .logo img{width: 100%;}
+.main .bg{width:100%; height:100%; position: absolute; top: 0; left: 0;}
+.main .bg .bird{position: absolute; top: 20%; animation: bird 1s forwards !important;}
+.main .bg .bird img{width: 100%;}
+.main .bg .tree1{background: url(bluebird/main_tree1.png);
+    position: absolute; left: 0;width: 100%; height: 100%; background-repeat: no-repeat;background-size: cover; background-attachment: fixed;}
+.main .bg .tree2{background: url(bluebird/main_tree2.png);
+    position: absolute; left: 0;width: 100%; height: 100%; background-repeat: no-repeat;background-size: cover; background-attachment: fixed;}
+
+@keyframes bird{
+    0%{transform: translate(0, 0)}
+    100%{transform: translate(30%, -30%)}
+}
+
+
+/*main 미디어쿼리*/
+@media(max-width:768px){
+    .main .logo{width: 250px;}
+}
+
+/*section1*/
+.section1 .row{margin-bottom: 30px; color: #000aba;}
+.section1 .container .title{font-family: 'HSBombaram'; font-size: 60px;}
+.section1 .text{font-size: 15px; font-weight: bold; padding-bottom: 10px; font-family: 'Nanum Myeongjo';}
+.section1 .simbol{position: absolute; top: calc(50% - 170px); right: 0; transition: 0.5s;}
+.section1 .simbol img{width: 100%;}
+
+/*section1 미디어쿼리*/
+@media(max-width:1850px){
+    .section1 .simbol{width: 200px; top: calc(50% - 100px);}
+}
+@media(max-width:1500px){
+    .section1 .container{padding-left: 150px}
+    .section1 .simbol{display: none;}
+}
+@media(max-width:768px){
+    .section1 .container .title{font-size: 45px;}
+    .section1 .container{padding-left: 15px; padding-top: 40px}
+    .section1 .simbol{display: block; width: 120px; top:10%}
+}
+
+
+/*section2*/
+.section2{display: flex; min-height: 400px;}
+.section2>.title{color: #e2e2e2;color: #e2e2e2;}
+.section2>.title span{background: #e2e2e2;}
+.section2>div:not(.title){width: 100%; height: 100vh;}
+.section2 .bg{background-image: url(bluebird/soon.jpg);
+        background-position: center center;;
+        background-size: cover; 
+        background-repeat: no-repeat;
+        min-height: 400px;}
+.section2 .text{background: #b29fa5; color: #e2e2e2;
+        display: flex; align-items: flex-start; justify-content: center; flex-direction: column; box-sizing: border-box; min-height: 400px;}
+.section2 .text h2{padding: 0 10%; font-family: 'HSBombaram'; font-size: 45px;}
+.section2 .text h4{padding: 0 10%; font-family: 'HSBombaram';font-size: 24px;}
+.section2 .text p{padding: 0 10%; font-family: 'Nanum Myeongjo'; font-weight: bold;font-size: 24px; max-width: 700px}
+.section2 .text .plus{padding: 0 10%; font-family: 'HSBombaram'; color: #e2e2e2; font-size: 15px; font-weight: normal}
+.section2 .text .plus:hover{color: #464646}
+.section2 .text .plus span{background: #464646}
+
+/*section2 미디어쿼리*/
+@media(max-width:768px){
+    .section2{flex-direction: column;}    
+    .section2 .bg{background-image: url(bluebird/m-soon.jpg);
+        background-position: center center;;
+        background-size: cover; 
+        background-repeat: no-repeat;
+        height: 50vh !important;}
+    .section2>.text{height: 50vh !important;}
+    .section2 .text h2{font-size: 30px;}
+    .section2 .text h4{font-size: 16px;}
+    .section2 .text p{font-weight: bold;font-size: 15px;}
+}
+
+/*section3*/
+.section3{background: white; padding: 0 !important;display: flex; align-items: center; justify-content: center;}
+.section3 .title2{position: absolute;transform: rotate(90deg); font-family: 'HSBombaram'; font-size: 50px; transform-origin: bottom left; right: -420px; top: calc(50% - 320px); width: 500px; text-align: center; opacity: 0.5; color: #e1e1e1}
+.section3 .box{height: 100%; width:  100%; display: flex; align-items: center; justify-content: center; margin: 100px}
+.section3 .stage{transition: 0.5s; width: 100%; height: 100%; box-sizing: border-box; top: 0; left: 0; clip-path:polygon(0 0, 100% 0, 100%  100%, 0 100%);}
+.section3 .stage .img{width: 100%;}
+.section3 .stage img {height: 100%; width: 100%; transition: 0.5s; opacity: 0.5;}
+.section3 .cursor{position: fixed; width: 500px; height: 500px; mix-blend-mode: difference; pointer-events: none; background: #000aba; border-radius: 50%; top: 50%; left: 50%;
+transition:transform 1s; cursor: none; transform: translate(-50%,-50%); opacity: 0;}
+.section3 .bg{position: absolute; top: -100px; height: 100%; right: 120px; pointer-events: none;}
+.section3 .bg img{height: 100%;}
+.section3 .select{width: 100%; height: 100%; z-index: 100; cursor: none; position: absolute; display: flex; align-items: center; flex-direction: column; justify-content: center;}
+.section3 .select .p1{font-family: 'Noto Sans KR'; color: #999; font-size: 72px; transition: 0.5s; font-weight: 300; letter-spacing: 5px; }
+.section3 .select .p2{font-family: 'Noto Sans KR'; color: #999; font-size: 15px; letter-spacing: 2px; font-weight: 100; top: -10px; transition: 0.5s; }
+.section3 .go{margin-bottom: 0; color: #888; font-family: 'Noto Sans KR'; font-size: 15px; cursor: pointer; z-index: 100; letter-spacing: 3px; background: white; padding: 10px 30px; text-indent: 3px; font-weight: 100; cursor: pointer;}
+.section3 .arrow{width: auto; position: absolute; bottom: -50px; right: 0; animation: arrow2 1s infinite}
+
+@keyframes arrow2{
+    0%{transform: translateX(0)}
+    50%{transform: translateX(10px)}
+    100%{transform: translateX(0)}
+}
+
+/*section3 미디어쿼리*/
+@media(max-width:1500px){
+    .section3{}
+    .section3 .title2{display: none;}
+    .section3 .box{margin: 60px}
+    .section3 .stage{}
+    .section3 .select .p1{font-size: 45px;}
+    .section3 .select .p2{font-size: 15px;}.section3 .bg{right: 30px;}
+    .section3 .cursor{width: 300px; height: 300px;}
+}
+@media(max-width:768px){
+    .section3 .box{margin: 0;}
+    .section3 .bg{display: none;}
+    .section3 .select .p1{left: 0; font-size: 30px;}
+    .section3 .select .p2{left: 0; font-size: 12px;}
+    .section3 .go{display: none;}
+    .section3 .arrow{bottom: 10px;right: calc(50% - 65px); mix-blend-mode: multiply}
+}
+
+
+/*section4*/
+.section4{height: 100vh; overflow: hidden; display: flex; align-items: center;}
+.section4 .poster-group{transform: rotate(10deg);}
+.section4 .poster-group .wrap{display: flex; justify-content: flex-end; right: -60px;}
+.section4 .poster-line{width: 23%; min-width: 250px; margin: 0 10px; transform: translateY(-30px); transition: 0.5s}
+.section4 .poster-line .poster{width: 100%; margin-bottom: 20px; cursor: pointer;}
+
+.modal_popup{position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; justify-content: center; align-items: center; display: none;}
+.modal_popup img{position: absolute; height: 90%; width: auto;}
+.modal_popup .bg{background: black; opacity: 0.8; width: 100%; height: 100%}
+
+/*section4 미디어쿼리*/
+@media(max-width:1500px){
+.section4 .poster-line{min-width: 350px;}
+}
+@media(max-width:768px){
+    .section4 .poster-line{min-width: 250px;}
+    .section4 .poster-line{transform: translateY(30px); right: -100px}
+}
+
+/*5section*/
+.section5{}
+.section5 .map{display: flex; width: 100%; height: calc(100vh - 250px);}
+.section5 .map-bg{background: url(bluebird/map.jpg);position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-position: center center; background-size: cover}
+.section5 .map-overlay{background: url(bluebird/overlay_map.png);position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-position: center center; background-size: cover}
+.section5 .map-mark{background: url(bluebird/mark_map.png);position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-position: center center; background-size: cover}
+.section5 .text{position: absolute; top: 40px; left: 50%; font-family: 'HSBombaram'}
+.section5 .text h3{font-size: 40px;}
+.section5 .text p{font-family: 'Nanum Myeongjo'; font-weight: bold; font-size: 20px;}
+.section5 .text span{font-size: 20px; padding-right: 5px; margin-right: 5px; cursor: pointer;}
+
+/*section5 미디어쿼리*/
+@media(max-width:1279px){
+    .section5 .text{top: 20px;}
+    .section5 .text h3{font-size: 30px;}
+    .section5 .text p{font-size: 15px;}
+    .section5 .text span{font-size: 15px;}
+}
+
+@media(max-width:768px){
+    .section5 .map{height: 50vh;}
+    .section5 .map-bg{background: url(bluebird/m_map.jpg); background-position: center center; background-size: cover}
+    .section5 .map-overlay{background: url(bluebird/m_overlay_map.png); background-position: center center; background-size: cover}
+    .section5 .map-mark{background: url(bluebird/m_mark_map.png);background-position: center center; background-size: cover}
+    .section5 .text{text-align: end; top: 0; left: 0; right: 15px;}
+    .section5 .text p{display: none;}
+    .section5 .text span{padding-right: 0px; margin-right: 0px; padding-left: 5px; margin-left: 5px;}
+}
+
+
+/*footer*/
+footer{background-color: #000aba !important; color: white; height: 250px;font-family: 'Nanum Myeongjo'; font-weight: bold;}
+footer .row{display: flex; align-items: center;}
+footer li{margin-bottom: 5px;}
+footer span{color: #999999;}
+footer .cont3 li{cursor: pointer;}
+
+/*footer 미디어쿼리*/
+@media(max-width:768px){
+    footer{height: auto;}
+    footer .row{display: block;}
+    footer .col-xs-12{margin: 15px 0;}
+    footer .cont4{position: absolute; bottom: -50px; width: 180px; right: 0;}
+}
