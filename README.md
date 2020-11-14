@@ -8,7 +8,7 @@
 
 This is the code repository for Inseo Lee, a "Present Continuous" web publisher.😄<br>
 It is designed to show the code of personal work included in the portfolio.<br>
-Please use it only for viewing your portfolio.<br><br>
+Please use it only for viewing portfolio.<br><br>
 
 Thank you.👋👋👋<br>
 
