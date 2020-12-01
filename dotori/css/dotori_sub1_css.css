@@ -1,0 +1,22 @@
+@charset"utf-8";
+
+body{min-width: 1450px;}
+
+/*header*/
+header .logo{width: 100%; padding: 50px 0; display: flex; justify-content: center}
+header .logo a{}
+header .logo img{}
+
+/*section1-네비게이션*/
+.section1 .text{padding: 20px 0; text-align: center; color: #aca090; border-bottom: 1px solid rgba(172, 160, 144, 0.3); width: 1120px; margin: 0 auto;}
+.section1 .text a{text-decoration: underline}
+
+/*section2-소개*/
+.section2 .container{width: 1130px; margin: 100px auto; display: flex; align-items: center;}
+.section2 .cont{font-size: 20px; margin: 20px 0; margin-left: 50px;}
+
+/*section3-연역*/
+.section3 .image{width: 1130px; margin: 100px auto;}
+.section3 img{width: 100%;}
+.section3 a{position: absolute; bottom: 135px; right: 0; }
+.section3 .go{width: 150px; height: 27px;}

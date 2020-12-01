@@ -1,0 +1,140 @@
+@charset"utf-8";
+
+*{padding: 0; margin: 0; list-style: none; position: relative;}
+img{display: block;}
+html{background: #f5f5f5; font-family: "Noto Sans KR"}
+body a{text-decoration: none; color: inherit;}
+body a:hover{text-decoration: none; color: inherit;}
+body a:visited{text-decoration: none; color: inherit;}
+body a:link{text-decoration: none;}
+:focus{outline: none;}
+.footer input:focus{outline: 2px solid #4a4339}
+.footer textarea:focus{outline: 2px solid #4a4339}
+::selection{background: #ebe2d8; color: #4a4339;}
+
+
+/*header-햄버거버튼*/
+.header .menu{position: absolute; cursor: pointer; width: 40px; height: 40px; top: 40px; right: 40px; z-index: 400; display: flex; flex-direction: column; justify-content: center;}
+.header .menu span{display: block; background: #43755b; height: 4px;}
+.header .menu span:nth-child(1){width: 34px; margin-bottom: 5px;}
+.header .menu span:nth-child(2){width: 24px; margin-bottom: 5px;}
+.header .menu span:nth-child(3){width: 28px;}
+
+.view{display: block !important;}
+
+/*section0-메뉴페이지*/
+.main-menu{position: fixed; background: #c4b8a8; height: 100vh; width: 100%; top: -100%; left: 0; z-index: 500;}
+.main-menu .search{position: absolute; font-size: 28px; cursor: pointer; margin: 0 5px; right: 110px; color: #4a4339; top: 41px;z-index: 600;}
+.main-menu .x-btn{position: absolute; right: 40px; top: 40px; padding: 5px; cursor: pointer; height: 40px; width: 40px; z-index: 600;}
+.main-menu .x-btn span{display: flex; width: 40px; height: 1px; background: black; top: 15px;}
+.main-menu .x-btn span:nth-child(1){transform: rotate(-45deg); top: 16px}
+.main-menu .x-btn span:nth-child(2){transform: rotate(45deg);}
+.main-menu .wrap{display: flex; justify-content: center; width: 100%;}
+.main-menu .wrap .logo{flex: 1; height: 100vh; display: flex; align-items: center; justify-content: flex-end;}
+.main-menu .wrap .logo img{width: 600px; margin-right: 50px;}
+.main-menu .menu{flex: 1; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; min-width: 300px;}
+.main-menu .menu-list .title{margin-left: 50px; display: flex; margin-bottom: 20px;}
+.main-menu .menu-list .title .text{font-size: 36px; font-weight: 900; cursor: pointer;}
+.main-menu .menu-list .title .plus span{display: block; height: 5px; width: 30px; background: black; top: 24px; left: 20px;}
+.main-menu .menu-list .title .plus span:nth-child(1){}
+.main-menu .menu-list .title .plus span:nth-child(2){transform: rotate(90deg) translateX(-4px);}
+.main-menu .qna{margin-left: 50px; font-size: 24px; font-weight: 900; margin-top: 0px;}
+.main-menu .qna>div{margin: 20px 0;}
+.main-menu .qna>div .text{width: 200px;}
+.main-menu .qna>div .text:hover{color: #43755b; text-decoration: underline;}
+.main-menu .sns-group{margin-left: 50px; margin-top: 10px;}
+.main-menu .sns-group .sns{display: flex;}
+.main-menu .sns-group .sns li{width: 40px; height: 40px; border-radius: 50%; background: #333130; display: flex; justify-content: center; align-items: center; font-size: 20px; margin: 0 5px;}
+.main-menu .sns-group .sns li a{color: #ebe2d8;}
+
+
+
+/*푸터*/
+.footer{min-width: 1100px;}
+.footer .bottom{width: 100%; height: 100%; background: #21201f; z-index: 100;display: flex; justify-content: space-between; padding: 20px; box-sizing: border-box; }
+.footer .left{margin: 0 20px; margin-bottom: 0;}
+.footer .left .text{color: #9d9391; font-size: 16px; display: flex; height: 100%; align-items: center;}
+.footer .left .text li{ margin-right: 40px;}
+.footer .right{display: flex; flex-direction: column; align-items: flex-end; margin-right: 40px;}
+.footer .right .menu{display: flex; color: #ebe2d8; font-size: 18px; font-weight: 500; margin-bottom: 20px; letter-spacing: 1px;}
+.footer .right .menu li{cursor: pointer; margin-left: 40px;}
+.footer .right .button-group{display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;}
+.footer .right button{color: #4a4339; background: #c4b8a8; border: none; height: 48px; display: flex; align-items: center; justify-content: center; padding: 0 10px;  font-size: 14px; cursor: pointer; font-weight: bold; width: 170px;}
+.footer .right button img{margin-left: 10px;}
+.footer .right button .arrow{padding-left: 10px}
+.footer .right button .arrow span{display: block; background: #4a4339; width: 10px; height: 2px;}
+.footer .right button .arrow span:nth-child(1){transform: rotate(-45deg);top: 2px; transition: 0.3s}
+.footer .right button .arrow span:nth-child(2){transform: rotate(45deg);left: 6px; transition: 0.3s}
+.footer .right button:nth-child(2){width: 170px;}
+.footer .right .sns{display: flex; margin-top: 10px;}
+.footer .right .sns li{font-size: 24px; margin: 5px; width: 35px; height: 35px; display: flex; justify-content: center; align-items: center; cursor: pointer;}
+.footer .right .sns li a{background: #c4b8a8; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%;}
+.footer .right .sns li a i{color: #4a4339;}
+
+/*온라인 렌탈 신청*/
+.footer .online{width: 830px; position: absolute; display: flex; flex-direction: column; bottom: 100%; right: 0; background: #ebe2d8; height: 0px; box-sizing: border-box; z-index: 50; padding: 0 100px; transition: 0.4s;box-sizing: border-box;}
+.footer .online .on{display: none;}
+.footer .online .x-btn{position: absolute; top: 40px; left: -40px;padding: 5px; cursor: pointer; height: 30px;}
+.footer .online .x-btn span{display: flex; width: 30px; height: 1px; background: black; top: 15px;}
+.footer .online .x-btn span:nth-child(1){transform: rotate(-45deg); top: 16px}
+.footer .online .x-btn span:nth-child(2){transform: rotate(45deg);}
+.footer .online .logo{width: 400px; position: absolute; top: 80px; left: calc(50% - 200px);}
+.footer .online .logo img{width: 100%;}
+.footer .online .row{display: flex; margin-top: 300px;}
+.footer .online .row>div {margin-right: 50px}
+.footer .online .row>div p{margin-bottom: 10px; color: #4a4339; font-weight: 500;}
+.date-group{margin-left: 40px;}
+.date{border: none; width: 180px; height: 50px; font-family: "Noto Sans KR";  padding: 0 10px; box-sizing: border-box; font-size: 16px}
+.num, .kitchen{display: flex; padding: 10px; margin-right: 5px; cursor: pointer;  background: white; width: 100px; box-sizing: border-box; justify-content: center;height: 50px; align-items: center;}
+.kitchen{width: 180px}
+.num .num-arrow, .kitchen .kitchen-arrow{margin-left: 5px;}
+.num .arrow2, .kitchen .arrow2{margin-left: 5px; position: absolute; top: -3px; left: -5px; background: white; display: none;}
+.num-sub, .kitchen-sub{position: absolute; display: flex; flex-direction: column; z-index: 100; width: 100px; height: 100px; background: white; border: 1px solid rgba(0,0,0,0.3); font-weight: 400; display: none;}
+.kitchen-sub{width: 180px; align-items: center;}
+.num-sub li, .kitchen-sub li{width: 80px; height: 32px; display: flex; align-items: center; padding: 0 10px; cursor: pointer;}
+.num-sub li:hover{color: #7b7164;}
+.kitchen-sub li:hover{color: #7b7164;}
+.input-group{margin: 40px}
+.input-group>div{width: 560px;}
+.input-group span{display: block; color: #4a4339; font-weight: 500; margin-bottom: 10px;}
+.input-group input{height: 30px; width: 100%; border: none; margin-bottom: 10px; font-family: "Noto Sans KR"; text-indent: 5px;}
+.input-group textarea{width: 100%; height: 70px; border: none; font-family: "Noto Sans KR"; text-indent: 5px;}
+.input-group button{width: 200px; height: 60px; border: none; background: #4a4339; color: #ebe2d8; font-weight: 500; font-family: "Noto Sans KR"; cursor: pointer; position: absolute; left: calc(50% - 100px); top: 390px; font-size: 24px;}
+
+/*쿠킹클래스 신청*/
+.footer .class{width: 830px; position: absolute; display: flex; flex-direction: column; bottom: 100%; right: 0; background: #ebe2d8; height: 0px; box-sizing: border-box; z-index: 50; padding: 0 100px; transition: 0.4s;box-sizing: border-box;}
+.footer .class .on{display: none;}
+.footer .class .x-btn{position: absolute; top: 40px; left: -40px;padding: 5px; cursor: pointer; height: 30px;}
+.footer .class .x-btn span{display: flex; width: 30px; height: 1px; background: black; top: 15px;}
+.footer .class .x-btn span:nth-child(1){transform: rotate(-45deg); top: 16px}
+.footer .class .x-btn span:nth-child(2){transform: rotate(45deg);}
+.footer .class .logo{width: 400px; position: absolute; top: 80px; left: calc(50% - 200px);}
+.footer .class .logo img{width: 100%;}
+.footer .class .row{display: flex; margin-top: 300px;}
+.footer .class .row>div {margin-right: 50px}
+.footer .class .row>div p{margin-bottom: 10px; color: #4a4339; font-weight: 500;}
+.date-group{margin-left: 40px;}
+.date{border: none; width: 180px; height: 50px; font-family: "Noto Sans KR";  padding: 0 10px; box-sizing: border-box; font-size: 16px}
+.num, .kitchen{display: flex; padding: 10px; margin-right: 5px; cursor: pointer;  background: white; width: 100px; box-sizing: border-box; justify-content: center;height: 50px; align-items: center;}
+.class .word{font-size: 12px;}
+.kitchen{width: 180px}
+.class .kitchen{width: 330px}
+.num .num-arrow, .kitchen .kitchen-arrow{margin-left: 5px;}
+.num .arrow2, .kitchen .arrow2{margin-left: 5px; position: absolute; top: -3px; left: -5px; background: white; display: none;}
+.num-sub, .kitchen-sub{position: absolute; display: flex; flex-direction: column; z-index: 100; width: 100px; height: 100px; background: white; border: 1px solid rgba(0,0,0,0.3); font-weight: 400; display: none;}
+.kitchen-sub{width: 180px; align-items: center;}
+.class .kitchen-sub{width: 330px;}
+.num-sub li, .kitchen-sub li{width: 90%; height: 32px; display: flex; align-items: center; justify-content: center; padding: 0 10px; cursor: pointer;}
+.num-sub li:hover{color: #7b7164;}
+.kitchen-sub li:hover{color: #7b7164;}
+.input-group{margin: 40px}
+.input-group>div{width: 560px;}
+.input-group span{display: block; color: #4a4339; font-weight: 500; margin-bottom: 10px;}
+.input-group input{height: 30px; width: 100%; border: none; margin-bottom: 10px; font-family: "Noto Sans KR"; text-indent: 5px;}
+.input-group textarea{width: 100%; height: 70px; border: none; font-family: "Noto Sans KR"; text-indent: 5px;}
+.input-group button{width: 200px; height: 60px; border: none; background: #4a4339; color: #ebe2d8; font-weight: 500; font-family: "Noto Sans KR"; cursor: pointer; position: absolute; left: calc(50% - 100px); top: 390px; font-size: 24px;}
+
+.action-menu{height: 950px !important;}
+.action-arrow1{transform: rotate(45deg) !important;}
+.action-arrow2{transform: rotate(-45deg)!important;}
+.action-menu .on{display: block !important;}
