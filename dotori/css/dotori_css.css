@@ -1,0 +1,92 @@
+@charset"utf-8";
+
+
+body{width: 1920px;}
+html{background: #c4b8a8 !important; font-family: "Noto Sans KR"}
+.all{height: 950px; display: grid; grid-template-columns: 450px 320px 320px 830px; grid-template-rows: 673px 277px;}
+
+/*section1*/
+.section1{grid-column: 1/2; grid-row: 1/2;}
+.section1 .logo{width: 100%;}
+.section1 .logo img {margin: 0 auto; margin-top: 50px;}
+.section1 .info-group{width: 307px ; margin: 0 auto;}
+.section1 .info:nth-child(1){}
+.section1 .info:nth-child(2){display: none;}
+.section1 .info:nth-child(3){display: none;}
+.section1 .info:nth-child(4){display: none;}
+.section1 .info .title{display: flex; margin-top: 50px;}
+.section1 .info .title h1{font-weight: 400; font-size: 50px; line-height: 60px; color: #4a4339; font-weight: 600}
+.section1 .info p{margin: 20px 0; font-size: 16px; line-height: 26px; color: #4a4339;}
+.section1 .info .move-arrow{display: flex; height: 70px; position: absolute; right: 80px; margin-top: 150px;}
+.section1 .info .move-arrow .left-arrow{top: 37px; left: -10px;  animation: move-arrow; animation-duration: 1s; position: absolute;animation-iteration-count: infinite; animation-timing-function: cubic-bezier(.61,.01,.43,.99);}
+.section1 .info .move-arrow .circle{width: 70px; height: 70px; background: #7b7164; border-radius: 50%; position: absolute; left: 40px; display: flex; align-items: center; overflow: hidden; transition: 0.5s; cursor: pointer;}
+.section1 .info .move-arrow .circle:hover{background: #4a4339}
+.section1 .info .move-arrow .right-arrow{top: -4px; left: -15px;animation: move-arrow; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(.61,.01,.43,.99);}
+
+@keyframes move-arrow{
+    0%{transform: translate(0,0);}
+    50%{transform: translate(10px,0);}
+    100%{transform: translate(0,0);}
+}
+
+.info-group .item{top:50px; opacity:0}
+
+
+/*section2*/
+.section2{grid-column: 2/4; grid-row: 1/2;}
+.section2 .black{position: absolute; top: 0; left: 0; background: black; width: 100%; height: 100%; opacity: 0.5;}
+.section2 .border{position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.section2 .border span{display: block; background: #f4eee7; position: absolute; }
+.section2 .border span:nth-child(1){height: 1px; width: 0; top: 5%; left: 5%; animation: border1 1.5s forwards;}
+.section2 .border span:nth-child(2){height: 0; width: 1px; top: 5%; right: 5%; animation: border2 1.5s forwards;}
+.section2 .border span:nth-child(3){height: 1px; width: 0; bottom: 5%; right: 5%; animation: border1 1.5s forwards;}
+.section2 .border span:nth-child(4){height: 0; width: 1px; bottom: 5%; left: 5%; animation: border2 1.5s forwards;}
+.section2 a{position: absolute; width: 100%; height: 100%; top: 0; left: 0; display: flex; align-items: center; justify-content: center;}
+.section2 a .text{font-weight: 500; font-size: 24px; color: #f4eee7;}
+
+@keyframes border1{
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+@keyframes border2{
+    0%{height: 0;}
+    100%{height: 90%;}
+}
+
+
+/*section3*/
+.section3{grid-column: 1/3; grid-row: 2/3}
+.section3 .black{position: absolute; top: 0; left: 0; background: black; width: 100%; height: 100%; opacity: 0.5;}
+.section3 a{position: absolute; width: 100%; height: 100%; top: 0; left: 0;}
+.section3 a .text{font-weight: 500; font-size: 24px; color: #f4eee7; display: flex; position: absolute; top: 20px; right: 20px;}
+.section3 a .text img{margin-left: 10px;}
+
+
+/*section4*/
+.section4{grid-column: 3/4; grid-row: 2/3; background: #645b4f; font-family: 'GmarketSansLight'}
+.section4 .scroll{position: absolute; left: 50px; bottom: -20px; z-index: 200;}
+.section4 .indicator{z-index: 20; position: absolute; top: 50px; left: 200px;;}
+.section4 .indicator .indi{display: flex; align-items: center; height: 35px}
+.section4 .indicator .indi p{color: #c4b8a8; font-size: 18px; text-align: right; letter-spacing: 0.5px; width: 40px; cursor: pointer;}
+.section4 .indicator .indi span{display: block; width: 0px; height: 1px; background: #c4b8a8; margin-left: 10px; transition: 0.3s}
+.section4 .indicator .indi:nth-child(1) p{color: #c4b8a8; font-size: 32px; margin-left: 5px;}
+.section4 .indicator .indi:not(.indi1){right: -10px;}
+.section4 .indicator .indi:nth-child(1) span{width: 98px;}
+
+
+/*section5*/
+.section5{grid-column: 4/5; grid-row: 1/3}
+.section5 .img img{width: 100%;}
+.section5 .bg-group{overflow: hidden;}
+.section5 .bg{}
+.section5 .bg img{width: 100%; display: block;}
+.section5 .btn-group{position: absolute; bottom: 3%;; right: 5%;}
+.section5 .btn-group .arrow-btn{margin: 10px; transition: 0.5s;}
+
+.section5 .scroll{position: absolute; bottom: 5% ; z-index: 20; left:10%; animation: move-scroll; animation-duration: 1s; animation-iteration-count: infinite;}
+
+@keyframes move-scroll{
+    0%{transform: translate(0,0);}
+    50%{transform: translate(0,10px);}
+    100%{transform: translate(0,0);}
+}
