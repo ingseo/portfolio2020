@@ -1,7 +1,8 @@
 이 곳은 "현재진행형" 웹 퍼블리셔 이인서의 코드 저장소입니다.😄<br>
 포트폴리오에 포함된 개인작업물의 코드를 보여드리기 위해 만들어졌습니다.<br><br>
 
-개인 또는 단체에서 코드를 가져가 사용하는 것을 금합니다.<br>
+해당 디자인과 코드의 저작권은 이인서에게 있습니다.<br>
+개인 또는 단체에서 가져가 사용하는 것을 금합니다.<br>
 오로지 포트폴리오 감상용으로만 사용해주세요. <br><br>
 
 감사합니다.👋👋👋<br><br>
@@ -11,7 +12,9 @@
 This is the code repository for Inseo Lee, a "Present Continuous" web publisher.😄<br>
 It is designed to show the code of personal work included in the portfolio.<br><br>
 
-It is prohibited for individuals or organizations to take and use the code.<br>
+
+The copyrights of the design and code is owned by Inseo Lee.<br>
+It is prohibited for individuals or organizations to take and use them.<br>
 Please use it only for viewing portfolio.<br><br>
 
 Thank you.👋👋👋<br>
